@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>샤브가 | 신선함이 끓어오르는 순간</title>
+    <!-- Tailwind CSS 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Inter 폰트 (Tailwind 기본 폰트)가 한국어를 잘 지원하도록 설정 */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* 히어로 비디오 화면 채우기 */
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        
+        /* 스크롤바 숨김 (선택 사항) */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- 1. 네비게이션 바 -->
+    <nav class="fixed top-0 left-0 w-full bg-white/90 shadow-md backdrop-blur-sm z-50">
+        <div class="container mx-auto max-w-6xl px-4 py-3 flex justify-between items-center">
+            <div class="text-2xl font-extrabold text-red-600">샤브가</div>
+            <ul class="flex space-x-6 items-center">
+                <li><a href="#intro" class="hidden sm:inline text-gray-600 font-medium hover:text-red-600 transition-colors">소개</a></li>
+                <li><a href="#menu" class="hidden sm:inline text-gray-600 font-medium hover:text-red-600 transition-colors">재료</a></li>
+                <li><a href="#experience" class="hidden sm:inline text-gray-600 font-medium hover:text-red-600 transition-colors">경험</a></li>
+                <li><a href="#reserve" class="bg-red-600 text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-red-700 transition-all transform hover:scale-105">예약하기</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 2. 히어로 섹션 (vid02.mp4) -->
+    <header class="relative h-screen min-h-[500px] flex items-center justify-center text-center text-white overflow-hidden">
+        <!-- vid02.mp4: 다양한 재료와 먹는 장면이 포함된 16:9 영상 -->
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="vid02.mp4" type="video/mp4">
+            브라우저가 비디오를 지원하지 않습니다.
+        </video>
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 p-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-shadow-lg">신선함이 끓어오르는 순간</h1>
+            <p class="text-lg md:text-xl font-medium mb-8">최고급 재료로 만든 따뜻한 샤브샤브 한 끼</p>
+            <a href="#menu" class="bg-red-600 text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-red-700 transition-all transform hover:scale-105">
+                오늘의 메뉴 보기
+            </a>
+        </div>
+    </header>
+
+    <!-- 3. 소개 섹션 (img01.png) -->
+    <section id="intro" class="py-20 bg-white">
+        <div class="container mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">따뜻한 국물에<br>신선함을 담그다</h2>
+                <p class="text-gray-600 text-lg mb-4 leading-relaxed">
+                    '샤브가'는 단순한 식사가 아닌, 따뜻한 경험을 선사합니다. 
+                    매일 아침 공수한 신선한 재료와 깊고 진한 육수가 만나 
+                    입안 가득 행복을 채웁니다.
+                </p>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    가장 맛있는 순간을 포착한 <strong>(img01.png)</strong>처럼, 
+                    여러분의 모든 순간이 특별해지도록 정성을 다합니다.
+                </p>
+            </div>
+            <div>
+                <!-- img01.png: 육수에 고기를 담그는 이미지 -->
+                <img src="img01.png" alt="샤브샤브를 육수에 담그는 모습" class="w-full h-auto rounded-xl shadow-2xl object-cover aspect-square">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 재료 소개 섹션 (img03.png) -->
+    <section id="menu" class="py-20 bg-gray-50">
+        <div class="container mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
+            <!-- img03.png: 고기, 야채, 소스 모음 -->
+            <div class="order-2 md:order-1">
+                <img src="img03.png" alt="샤브샤브 재료 (고기, 야채, 소스)" class="w-full h-auto rounded-xl shadow-2xl object-cover">
+            </div>
+            <div class="order-1 md:order-2 text-center md:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">완벽한 한 끼의 구성</h2>
+                <ul class="space-y-5">
+                    <li class="flex items-start space-x-3">
+                        <span class="text-red-600 text-2xl font-bold">✓</span>
+                        <div>
+                            <h3 class="text-xl font-bold">최상급 고기</h3>
+                            <p class="text-gray-600">선홍빛 마블링의 소고기와 담백한 돼지고기</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <span class="text-red-600 text-2xl font-bold">✓</span>
+                        <div>
+                            <h3 class="text-xl font-bold">신선한 야채와 해산물</h3>
+                            <p class="text-gray-600">배추, 청경채, 버섯부터 새우, 조개까지</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <span class="text-red-600 text-2xl font-bold">✓</span>
+                        <div>
+                            <h3 class="text-xl font-bold">다채로운 추가 재료</h3>
+                            <p class="text-gray-600">어묵, 유부, 두부, 만두 등 골라 먹는 재미</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <span class="text-red-600 text-2xl font-bold">✓</span>
+                        <div>
+                            <h3 class="text-xl font-bold">4가지 특제 소스</h3>
+                            <p class="text-gray-600">칠리, 간장, 땅콩, 참깨 소스로 완성되는 맛</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 경험 섹션 (img04.png, vid01.mp4, vid03.mp4) -->
+    <section id="experience" class="py-20 bg-white text-center">
+        <div class="container mx-auto max-w-6xl px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">함께해서 더 즐거운</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                친구, 연인, 가족과 함께하는 행복한 시간을 '샤브가'에서 만들어보세요.
+                <strong>(img04.png)</strong>의 웃음처럼 즐거운 추억을 선사합니다.
+            </p>
+            <!-- img04.png: 가족 식사 장면 -->
+            <img src="img04.png" alt="가족들이 즐겁게 식사하는 모습" class="w-full max-w-4xl mx-auto rounded-xl shadow-xl mb-12">
+            
+            <h3 class="text-2xl font-bold mb-8">#샤브가_모먼트</h3>
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- vid01.mp4, vid03.mp4: 세로 영상 (경험 강조) -->
+                <video controls loop class="w-full h-auto rounded-xl shadow-lg" poster="img04.png">
+                    <source src="vid03.mp4" type="video/mp4">
+                </video>
+                <video controls loop class="w-full h-auto rounded-xl shadow-lg" poster="img02.png">
+                    <source src="vid01.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CTA 섹션 (img02.png 배경) -->
+    <section id="reserve" class="relative py-32 text-center text-white bg-fixed bg-cover bg-center" style="background-image: url('img02.png');">
+        <!-- img02.png: 테이블 전체 샷 (탑뷰) -->
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 p-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">지금, 이 따뜻함을 예약하세요</h2>
+            <p class="text-lg md:text-xl mb-8">
+                풍성하게 차려진 <strong>(img02.png)</strong>의 한상차림이
+                여러분을 기다리고 있습니다.
+            </p>
+            <a href="#footer" class="bg-white text-red-600 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-200 transition-all transform hover:scale-105">
+                매장 위치 및 예약
+            </a>
+        </div>
+    </section>
+
+    <!-- 7. 푸터 -->
+    <footer id="footer" class="py-16 bg-gray-800 text-gray-400 text-center">
+        <div class="container mx-auto px-4">
+            <div class="text-2xl font-extrabold text-white mb-4">샤브가</div>
+            <p class="mb-2">주소: 서울특별시 중구 세종대로 110</p>
+            <p class="mb-6">전화: 02-123-4567</p>
+            <p class="text-sm">&copy; 2025 Shabu-Ga. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 부드러운 스크롤을 위한 스크립트 -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // '예약하기' 버튼의 기본 동작은 유지 (새 페이지 이동 등)
+                if (this.getAttribute('href') === '#reserve' && this.classList.contains('cta-button')) {
+                    return;
+                }
+                
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // 네비게이션 바 높이(약 60-70px)를 고려하여 스크롤
+                    const headerOffset = 70; 
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
