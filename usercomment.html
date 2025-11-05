@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>샤브가 | 고객 후기</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Inter 폰트 (Tailwind 기본 폰트)가 한국어를 잘 지원하도록 설정 */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+
+    <nav class="sticky top-0 w-full bg-white/90 shadow-md backdrop-blur-sm z-50">
+        <div class="container mx-auto max-w-6xl px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold text-red-600">샤브가</a>
+            <ul class="flex space-x-6 items-center">
+                <li><a href="index.html#reserve" class="hidden sm:inline text-gray-600 font-medium hover:text-red-600 transition-colors">예약하기</a></li>
+                <li><a href="index.html" class="bg-red-600 text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-red-700 transition-all transform hover:scale-105">홈으로</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        <section id="comments" class="py-20 bg-white">
+            <div class="container mx-auto max-w-4xl px-4 text-center">
+                <h1 class="text-3xl md:text-4xl font-bold mb-6">고객 후기</h1>
+                <p class="text-gray-600 text-lg mb-12 leading-relaxed">
+                    '샤브가'를 찾아주신 고객님들의 소중한 후기입니다.
+                </p>
+
+                <div class="space-y-8 text-left">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border border-gray-200">
+                        <div class="flex items-center mb-3">
+                            <span class="font-bold text-lg text-red-600">김*정 님</span>
+                            <span class="ml-auto text-sm text-gray-500">2025. 10. 28.</span>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            가족 외식으로 방문했는데 정말 만족스러웠습니다. 재료가 신선하고 육수 맛이 깊어서 부모님도 아이도 모두 좋아했어요. 매장도 깔끔하고 직원분들도 친절하셔서 기분 좋게 식사했습니다.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border border-gray-200">
+                        <div class="flex items-center mb-3">
+                            <span class="font-bold text-lg text-red-600">박*수 님</span>
+                            <span class="ml-auto text-sm text-gray-500">2025. 10. 25.</span>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            친구 추천으로 왔는데 왜 추천했는지 알겠네요. 특히 4가지 특제 소스가 정말 맛있었어요. 야채도 무한리필이라 배부르게 잘 먹고 갑니다. 재방문 의사 100%입니다!
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-10 rounded-xl text-center">
+                        <p class="text-gray-500 text-lg">
+                            소중한 후기를 준비 중입니다.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="py-16 bg-gray-800 text-gray-400 text-center">
+        <div class="container mx-auto px-4">
+            <a href="index.html" class="text-2xl font-extrabold text-white mb-4 inline-block">샤브가</a>
+            <p class="mb-2">주소: 서울특별시 금천구 독산동</p>
+            <p class="mb-6">전화: 02-123-4567</p>
+            <p class="text-sm">&copy; 2025 Shabu-Ga. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
