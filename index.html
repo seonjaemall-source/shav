@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-519PE99B5Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -14,7 +13,6 @@
   gtag('config', 'G-519PE99B5Y');
 </script>
     
-    <!-- 오픈그래프 설정 -->
     <meta property="og:title" content="'샤브가'는 단순한 식사가 아닌, 따뜻한 경험을 선사합니다.">
     <meta property="og:description" content="매일 아침 공수한 신선한 재료와 깊고 진한 육수가 만나 입안 가득 행복을 채웁니다.">
     <meta property="og:image" content="img01.png">
@@ -23,7 +21,6 @@
 
     
     <title>샤브가 | 신선함이 끓어오르는 순간</title>
-    <!-- Tailwind CSS 로드 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Inter 폰트 (Tailwind 기본 폰트)가 한국어를 잘 지원하도록 설정 */
@@ -54,7 +51,6 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-    <!-- 1. 네비게이션 바 -->
     <nav class="fixed top-0 left-0 w-full bg-white/90 shadow-md backdrop-blur-sm z-50">
         <div class="container mx-auto max-w-6xl px-4 py-3 flex justify-between items-center">
             <div class="text-2xl font-extrabold text-red-600">샤브가</div>
@@ -62,14 +58,13 @@
                 <li><a href="#intro" class="hidden sm:inline text-gray-600 font-medium hover:text-red-600 transition-colors">소개</a></li>
                 <li><a href="#menu" class="hidden sm:inline text-gray-600 font-medium hover:text-red-600 transition-colors">재료</a></li>
                 <li><a href="#experience" class="hidden sm:inline text-gray-600 font-medium hover:text-red-600 transition-colors">경험</a></li>
+                <li><a href="usercomment.html" class="hidden sm:inline text-gray-600 font-medium hover:text-red-600 transition-colors">고객 후기</a></li>
                 <li><a href="#reserve" class="bg-red-600 text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-red-700 transition-all transform hover:scale-105">예약하기</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- 2. 히어로 섹션 (vid02.mp4) -->
     <header class="relative h-screen min-h-[500px] flex items-center justify-center text-center text-white overflow-hidden">
-        <!-- vid02.mp4: 다양한 재료와 먹는 장면이 포함된 16:9 영상 -->
         <video autoplay loop muted playsinline class="hero-video">
             <source src="vid02.mp4" type="video/mp4">
             브라우저가 비디오를 지원하지 않습니다.
@@ -84,7 +79,6 @@
         </div>
     </header>
 
-    <!-- 3. 소개 섹션 (img01.png) -->
     <section id="intro" class="py-20 bg-white">
         <div class="container mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
             <div class="text-center md:text-left">
@@ -100,16 +94,13 @@
                 </p>
             </div>
             <div>
-                <!-- img01.png: 육수에 고기를 담그는 이미지 -->
                 <img src="img01.png" alt="샤브샤브를 육수에 담그는 모습" class="w-full h-auto rounded-xl shadow-2xl object-cover aspect-square">
             </div>
         </div>
     </section>
 
-    <!-- 4. 재료 소개 섹션 (img03.png) -->
     <section id="menu" class="py-20 bg-gray-50">
         <div class="container mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
-            <!-- img03.png: 고기, 야채, 소스 모음 -->
             <div class="order-2 md:order-1">
                 <img src="img03.png" alt="샤브샤브 재료 (고기, 야채, 소스)" class="w-full h-auto rounded-xl shadow-2xl object-cover">
             </div>
@@ -149,7 +140,6 @@
         </div>
     </section>
 
-    <!-- 5. 경험 섹션 (img04.png, vid01.mp4, vid03.mp4) -->
     <section id="experience" class="py-20 bg-white text-center">
         <div class="container mx-auto max-w-6xl px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">함께해서 더 즐거운</h2>
@@ -157,12 +147,10 @@
                 친구, 연인, 가족과 함께하는 행복한 시간을 '샤브가'에서 만들어보세요.
                 <strong>예제 사진</strong>의 웃음처럼 즐거운 추억을 선사합니다.
             </p>
-            <!-- img04.png: 가족 식사 장면 -->
             <img src="img04.png" alt="가족들이 즐겁게 식사하는 모습" class="w-full max-w-4xl mx-auto rounded-xl shadow-xl mb-12">
             
             <h3 class="text-2xl font-bold mb-8">#샤브가_모먼트</h3>
             <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <!-- vid01.mp4, vid03.mp4: 세로 영상 (경험 강조) -->
                 <video controls loop class="w-full h-auto rounded-xl shadow-lg" poster="img04.png">
                     <source src="vid03.mp4" type="video/mp4">
                 </video>
@@ -173,9 +161,7 @@
         </div>
     </section>
 
-    <!-- 6. CTA 섹션 (img02.png 배경) -->
     <section id="reserve" class="relative py-32 text-center text-white bg-fixed bg-cover bg-center" style="background-image: url('img02.png');">
-        <!-- img02.png: 테이블 전체 샷 (탑뷰) -->
         <div class="absolute inset-0 bg-black/60"></div>
         <div class="relative z-10 p-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">지금, 이 따뜻함을 예약하세요</h2>
@@ -189,7 +175,6 @@
         </div>
     </section>
 
-    <!-- 7. 푸터 -->
     <footer id="footer" class="py-16 bg-gray-800 text-gray-400 text-center">
         <div class="container mx-auto px-4">
             <div class="text-2xl font-extrabold text-white mb-4">샤브가</div>
@@ -199,7 +184,6 @@
         </div>
     </footer>
 
-    <!-- 부드러운 스크롤을 위한 스크립트 -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -230,13 +214,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
